@@ -1,0 +1,941 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-image: url("Image/regisBg.png");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    padding-bottom: 70px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: auto;
+    }
+
+
+.regisform{
+    position: absolute ;
+    width: 25%; 
+    top: 42%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 20px ;
+    box-shadow:  1px 1px 5px 0px black;
+    box-sizing: border-box;
+    border-radius: 5%;
+    backdrop-filter: blur(20px);
+    flex: 1;
+    z-index: 100;
+}
+
+.regisform h2{
+    font-weight: 700;
+}
+.regisform input[type=text]::placeholder,
+.regisform input[type=password]::placeholder,
+.regisform input[type=email]::placeholder{
+  color: black;
+  opacity: 0.4;
+}
+.regisform input[type=submit] {
+  width: 100%;
+  background-image:  linear-gradient(to bottom right, #cd0a39 , #b24644  ); 
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 120;
+  transition: all .2s linear;
+}
+
+.regisform input[type=submit]:hover{
+    background-image:  linear-gradient(to bottom right,#ae5386 ,  #9d4e48 ); 
+    color: black;
+
+}
+
+.regisform input[type=text], input[type=password], input[type=email], input[type=date] {
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    margin-bottom: 1px;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 120%;
+    background: none;
+  }
+
+  nav ul{
+    display: inline-block;
+    font-size: larger;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 0px 5px black;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+  }
+
+  nav ul img{
+    float: right;
+    margin-right: 1%;
+    max-width: 10%;
+  }
+
+  nav li{
+    float: left;
+    align-items: center;
+    display: flex;
+  }
+  nav li a{
+    color: black;
+    margin: 0.5px;
+    float: left;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: all .2s linear;
+    text-align: center;
+  }
+
+  nav li a:hover{
+    font-size: large;
+    font-weight: 700;
+  }
+
+  .active{
+    font-weight: 700;
+    color: rgb(25,25,25 );
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    float: left;
+  }
+
+  .dropdown .prodBtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    color: black;
+    margin: 0.5px;
+    float: left;
+    text-decoration: none;
+    padding: 13.5px 20px;
+    display: block;
+    transition: all .2s linear;
+    text-align: center;
+    }
+
+    .dropdown .prodBtn:hover{
+      font-size: large;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    
+    .dropCont{
+      opacity: 0.8;
+      min-width: 200px;
+      text-align: center;
+      display: none;
+      width: 100%;
+      position: absolute;
+      background-image:  linear-gradient(to bottom right, #cd0a39 , #b24644   ); 
+      box-shadow: 1px 1px 10px 0px black;
+      z-index: 999;
+      top: 100%;
+    }
+
+    .dropdown:hover .dropCont{
+      display: block;
+    }
+
+    .dropCont a {
+      font-size: 75%;
+      float: none;
+      color: black;
+      padding: 15px 16px;
+      text-decoration: none;
+      text-align: left;
+      display: block;
+      z-index: 99999;
+      transition: all .2s linear;
+    }
+    .dropCont a:hover{
+      background-image:  linear-gradient(to bottom right,#ae5386 ,  #9d4e48 ); 
+      font-weight: bold;
+    }
+
+    footer{
+      margin-top: auto;
+      position: absolute;
+      bottom: 0;
+      backdrop-filter: blur(40px);
+      left: 0;
+      width: 100%;
+      height: 160px;
+      display: block;
+      border-top: 0.5px solid black;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      }
+    footer img{
+      max-width: 100%;
+      max-height: 100%;
+      float: left;
+    }
+    footer a{
+      float: left;
+      font-size: 150%;
+      text-decoration: none;
+      margin: 0;
+      padding: 10px;
+      color: black;
+      transition: all .1s linear;
+    }
+
+    footer a:hover{
+      font-weight: bolder;
+    }
+
+    footer ul{
+      float: right;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+      font-size: 90%;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    footer .socialIcon{
+      position: absolute;
+      font-size: 300%;
+      top: 10%;
+      left: 44.5%;
+      letter-spacing: 10px;
+    }
+
+    footer li{
+      padding: 0 11px;
+      justify-content: center;
+    }
+
+    footer h3{
+      font-weight: lighter;
+      text-align: center;
+      left: 46%;
+      bottom: 0;
+      position: absolute;
+      opacity: 0.7;
+    }
+
+    .homecontainer{
+      position: relative;
+      margin-top: 3%;
+      min-height:100vh;
+      width: 100%;
+      height: auto;
+      background-color: rgb(255, 255, 255, 0.87);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .homecontainer .landing{
+      margin-top: 50px;
+      position: relative;
+      left: 25%;
+      width: 50%;
+      height: auto;
+      margin-bottom: 50px;
+    }
+
+   .landing h2{
+      color: maroon;
+      font-weight: 900;
+      font-size: 280%;
+    }
+
+    .landing h2 span{
+      color:#cd0a39;
+    }
+
+    .landing p{
+      font-size: 120%;
+      font-weight: 500;
+      text-align: justify;
+      line-height: 40px;
+    }
+
+    .landing a{
+      font-weight: bold;
+      font-size: 160%;
+      text-decoration: none;
+      background-color: #ae5386;
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+      transition: .2s all linear;
+      float: right;
+    }
+
+    .landing a:hover{
+      color: wheat;
+      background-color:#cd0a39;
+    }
+
+    .homecontainer .itemhome{
+      position: relative;
+      margin-top: 30px;
+      left: 0;
+      right: 0;
+      background-color: rgb(102, 18, 56, 0.7);
+      height: 350px;
+      margin-bottom: 200px;
+      padding-bottom: 50px;
+      padding-left: 25%;
+    }
+
+    .itemhome p{
+      font-size: 120%;
+      font-weight: 500;
+      text-align: justify;
+      font-weight: 500;
+      margin-left: 110px;
+    }
+    .itemhome img{
+      margin: 20px;
+      box-shadow: 1px 0px 5px 0px black;
+      max: width 5cm;
+      max-height: 5cm;
+      border-radius: 8px;
+      transition: all .2s linear;
+      float: left;
+      border: 5px solid white;
+    }
+    .itemhome img:hover{
+      max: width 5.5cm;
+      max-height: 5.5cm;
+    }
+
+    .prodContainer{
+      place-content: center;
+      width: 80%;
+      display: grid;
+      grid-template-columns:repeat(auto-fit, 250px);
+      row-gap: 40px;
+      column-gap: 100px;
+      position: relative;
+      top: 70px;
+      left: 10%;
+      height: auto;
+      padding-bottom: 220px;
+    }
+
+    .prodContainer .prodCard{
+      box-shadow:  1px 1px 5px 0px black;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      width: 300px;
+      padding: 5px;
+      position: relative;
+      transition: all .1s linear;
+    }
+
+    .prodCard:hover{
+      width: 320px;
+      }
+
+    .prodCard img{
+      border-radius: 10px 10px 0px 0px;
+      max-width: 100%;
+    }
+
+    .prodContainer .prodCard .cardContent{
+      padding: 5px;
+    }
+
+    .cardContent{
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+    }
+
+    .prodCard .cardContent h4{
+      font-weight:900;
+      bottom: 0px;
+      position:absolute;
+      
+    }
+
+    .cardContent p{
+      color: rgb(40,40,40);
+      text-align: justify;
+      padding: 5px;
+      margin-bottom: 50px;
+      background-color: gainsboro;
+      border-radius: 10px;
+    }
+
+    .homecontainer .galleryContainer{
+      float: left;
+      margin-top: 20px;
+      padding-left: 45px;
+      background-color: rgb(102, 18, 56, 0.6);
+      margin-bottom: 140px;
+    }
+
+    .homecontainer .galleryContainer .gallery{
+      box-shadow:  1px 1px 5px 0px black;
+      width: 340px;
+      margin: 10px;
+      float: left;
+      margin-bottom: 20px;
+    }
+
+    .gallery img{
+      box-shadow:  1px 1px 5px 0px black;
+      width: 100%;
+    }
+
+    .homecontainer .titleEvent{
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .homecontainer .eventOdd{
+      margin-top: 20px;
+      position: relative;
+      padding: 30px;
+      background-color: rgb(160, 150, 170, 0.6);
+    }
+
+    .eventOdd .oddImg{
+      width: 300px;
+      box-shadow:  1px 1px 5px 0px black;
+      float: left;
+      border-radius: 10px;
+    }
+
+    .oddImg img{
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: -1.2%;
+      height: auto;
+    }
+
+    .descOdd{
+      width: 75%;
+      float: right;
+      line-height: 35px;
+      text-align: justify;
+    }
+
+    .descOdd h3 {
+      font-size: 150%;
+      font-weight: 900;
+    }
+
+    .homecontainer .eventEven{
+      position: relative;
+      left: 0;
+      right: 0;
+      background-color: rgb(102, 18, 56, 0.7);
+      margin-bottom: 100px;
+      padding: 30px;
+      align-items: center;
+    }
+
+    .descEven{
+      width: 75%;
+      float: left;
+      line-height: 35px;
+      text-align: justify;
+    }
+
+    .descEven h3{
+      font-size: 150%;
+      font-weight: 900;
+    }
+
+    .eventEven .evenImg{
+      width: 340px;
+      box-shadow:  1px 1px 5px 0px black;
+      float: right;
+      border-radius: 10px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .evenImg img{
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: -1.2%;
+    }
+
+  @media screen and (max-width: 768px) { 
+      
+      /* Buat layar hp */
+
+      .regisform{
+          width: 90%; 
+          position: absolute; 
+          top: 45%; 
+          left: 50%; 
+          transform: translate(-50%, -50%); 
+          padding: 20px ;
+          box-shadow:  1px 0px 10px 0px black;
+          box-sizing: border-box;
+          border-radius: 5%;
+          backdrop-filter: blur(15px);
+      }
+  
+      .regisform input[type=text], input[type=password], input[type=email], input[type=date] {
+        border-radius: 10px;
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        margin-bottom: 1px;
+        display: inline-block;
+        border: 1px solid black;
+        box-sizing: border-box;
+        font-size: 120%;
+        background: none;
+      }
+  
+      .regisform input[type=submit] {
+        width: 100%;
+        color: white;
+        font-size: large  ;
+        padding: 14px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 120;
+        transition: all .2s linear;
+      }
+      
+     nav ul img{
+        display: none;
+        width: 22%;
+        margin-right: 10px;
+        float: right;
+      }
+      nav li{
+        width: 20%;
+        text-align: center;
+        padding-left: -10px;
+        margin-left: 1px;
+      }
+      nav li a{
+        font-size: small;
+        color: black;
+        margin: 0.5px;
+        float: left;
+        text-decoration: none;
+        padding: 1px 5px;
+        display: block;
+        transition: all .2s linear;
+        text-align: center;
+      }
+  
+      nav ul{
+        display: flex;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        list-style-type: none;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: 1px 0px 5px black;
+        backdrop-filter: blur(5px);
+        z-index: 120;
+        right: 0;
+
+        
+      }
+
+      footer{
+        height: 150px;
+      }
+
+      footer .socialIcon{
+        position: absolute;
+        font-size: 200%;
+        left: 32%;
+      }
+
+      footer img{
+        float: left;
+      }
+      
+      footer h3{
+        font-weight: lighter;
+        font-size: medium;
+        text-align: center;
+        left: 35%;
+      }
+
+      footer a{
+        font-size: medium;
+        position: relative;
+        float: left;
+      }
+
+      .homecontainer .landing{
+        margin-top: 80px;
+        width: 75%;
+        left: 10%;
+      }
+
+      .homecontainer .itemhome{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        margin-top: 150px;
+        margin-bottom: 90px;
+        width: 90%;
+        height: auto;
+        left: 0;
+        justify-content: center;
+        padding-left: 10%;
+      }
+
+      .itemhome p{
+        font-size: small;
+        text-align: center;
+      }
+
+      .itemhome img{
+        max-width: 5cm;
+        max-height:5cm ;
+        border-radius: 0;
+        margin-left: 50px;
+        margin-bottom: 0px;
+      }
+      
+      .itemhome img:hover{
+        max: width 5.3cm;
+        max-height: 5.3cm;
+      }
+      
+      .landing p{
+        font-size: medium;
+        line-height: 25px;
+      }
+
+      .landing h2{
+        font-size: 30px;
+      }
+
+      .dropdown .prodBtn {
+        font-size: small;
+        color: black;
+        margin:1px;
+        text-decoration: none;
+        padding: 16px 20px 5px ;
+        display: block;
+        text-align: center;
+        }
+
+        .prodContainer{
+          place-content: center;
+          width: 60%;
+          display: grid;
+          grid-template-columns:repeat(auto-fit, 250px);
+          gap: 40px;
+          position: relative;
+          top: 100px;
+          left: 10%;
+          height: auto;
+          padding-bottom: 200px;
+        }
+    
+        .prodContainer .prodCard{
+          box-shadow:  0px 0px 0px 0px black;
+          border-radius: 5px;
+          border: 1px solid gray;
+          background-color: whitesmoke;
+          width: 300px;
+          padding: 5px;
+          position: relative;
+        }
+    
+        .prodCard img{
+          border-radius: 10px 10px 0px 0px;
+          max-width: 100%;
+          height: auto;
+        }
+    
+        .prodContainer .prodCard .cardContent{
+          padding: 5px;
+        }
+    
+        .prodCard .cardContent h4{
+          font-weight:900;
+          bottom: 0px;
+          position:absolute;
+          
+        }
+    
+        .cardContent p{
+          color: rgb(40,40,40);
+          text-align: justify;
+          margin-bottom: 50px;
+        }
+
+        .homecontainer .galleryContainer{
+          float: left;
+          margin-top: 60px;
+          padding-left: 45px;
+          background-color: rgb(102, 18, 56, 0.6);
+          margin-bottom: 50px;
+        }
+    
+        .homecontainer .galleryContainer .gallery{
+          box-shadow:  1px 1px 5px 0px black;
+          width: 300px;
+          margin: 10px;
+          float: left;
+          margin-bottom: 90px;
+        }
+    
+        .gallery img{
+          box-shadow:  1px 1px 5px 0px black;
+          width: 100%;
+        }
+
+        .homecontainer .titleEvent{
+          margin-top: 20px;
+          text-align: center;
+        }
+    
+        .homecontainer .eventOdd{
+          margin-top: 20px;
+          position: relative;
+          padding: 30px;
+          background-color: rgb(160, 150, 170, 0.6);
+        }
+    
+        .homecontainer .eventOdd .oddImg{
+          width: 300px;
+          box-shadow:  1px 1px 5px 0px black;
+          float: none;
+          border-radius: 10px;
+        }
+    
+        .oddImg img{
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: -1.2%;
+        }
+    
+        .descOdd{
+          width: 75%;
+          float: none;
+          line-height: 25px;
+          text-align: justify;
+          margin-left: 30px;
+        }
+    
+        .descOdd h3 {
+          font-size: 150%;
+          font-weight: 900;
+        }
+    
+        .homecontainer .eventEven{
+          position: relative;
+          left: 0;
+          right: 0;
+          background-color: rgb(102, 18, 56, 0.7);
+          margin-bottom: 100px;
+          padding: 30px;
+        }
+    
+        .descEven{
+          width: 75%;
+          float: none;
+          line-height: 25px;
+          text-align: justify;
+          margin-left: 30px;
+        }
+    
+        .descEven h3{
+          font-size: 150%;
+          font-weight: 900;
+        }
+    
+        .evenImg{
+          width: 340px;
+          box-shadow:  1px 1px 5px 0px black;
+          float: none;
+          border-radius: 10px;
+          margin-top: 40px;
+        }
+    
+        .evenImg img{
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: -1.2%;
+        }
+
+  }
+
+  @media screen 
+    and (min-device-width: 900px)
+    and (max-device-width: 1900px){
+
+      /* Layar 15 inci */
+
+      .regisform{
+        width: 30%; 
+        position: absolute; 
+        top: 43%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        padding: 15px ;
+        box-shadow:  1px 0px 10px 0px black;
+        box-sizing: border-box;
+        border-radius: 5%;
+    }
+
+    .regisform input[type=text], input[type=password], input[type=email], input[type=date] {
+      border-radius: 10px;
+      width: 100%;
+      padding: 10px 10px;
+      margin: 2px 0;
+      margin-bottom: 1px;
+      display: inline-block;
+      border: 1px solid black;
+      box-sizing: border-box;
+      font-size: 120%;
+      background: none;
+    }
+
+    .regisform input[type=submit] {
+      width: 100%;
+      color: white;
+      font-size:medium;
+      padding: 10px 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 120;
+      transition: all .2s linear;
+
+    }
+
+    .homecontainer .itemhome{
+      padding-left: 250px;
+    }
+    
+    .itemhome p{
+      margin-left: 110px;
+    }
+
+    .dropdown .prodBtn {
+      border: none;
+      outline: none;
+      background-color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      color: black;
+      margin: 0.5px;
+      float: left;
+      text-decoration: none;
+      padding: 12.5px 20px;
+      display: block;
+      transition: all .2s linear;
+      text-align: center;
+      }
+
+      .prodContainer{
+        width: 100%;
+        top: 50px;
+        left: 0;
+        }
+    
+        .homecontainer .galleryContainer .gallery{
+          box-shadow:  1px 1px 5px 0px black;
+          width: 270px;
+          margin: 10px;
+          margin-bottom: 20px;
+        }
+  
+  }
+
+  @media screen and (max-device-width: 390px){
+                        /* Buat hp kecil */
+
+    .regisform{
+      width: 90%; 
+      position: absolute; 
+      top: 43%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      padding: 10px;
+      box-shadow:  1px 0px 10px 0px black;
+      box-sizing: border-box;
+      border-radius: 5%;
+      backdrop-filter: blur(40px);
+  }
+
+  .regisform label{
+    font-size: medium;
+  }
+
+  .regisform input[type=text], input[type=password], input[type=email], input[type=date] {
+    border-radius: 5px;
+    width: 100%;
+    padding: 2px 5px;
+    margin: 2px 0;
+    margin-bottom: 1px;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 120%;
+    background: none;
+  }
+
+  .regisform input[type=submit] {
+    width: 100%;
+    color: white;
+    font-size:medium;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 120;
+    transition: all .2s linear;
+
+  }
+  }

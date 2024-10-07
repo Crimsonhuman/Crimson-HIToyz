@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>HI-Toyz - Register</title>
+
+</head>
+<body>
+
+<nav>
+
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <div class="dropdown">
+    <li><button class="prodBtn">Products ⏷</button></li>
+    <div class="dropCont">
+        <a href="bandai.html">Bandai Gunpla</a>
+        <a href="koto.html">Kotobukiya Model Kits</a>
+    </div>
+    </div>
+    <li><a href="event.html">Events</a></li>
+    <li><a class="active" href="register.html">Register</a></li>
+    <div class="logo">
+      <a href="home.html"><img src="Image/logohoriz.png" alt="hitoyz Logo"></a>
+    </div>
+  </ul>
+
+</nav>  
+ 
+
+  <div class="regisform">
+      <h2>Register</h2>
+      <form name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" minlength="4" placeholder="Minimum 4 Characters" required><br><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" minlength="8" placeholder="Minimum 8 Characters" required><br><br>
+
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required><br><br>
+
+        <label for="dob">Date of Birth</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <input type="checkbox" id="agreement" name="agreement" required>
+        <label for="agreement">I agree to the terms and conditions</label><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+  </div>
+
+</body>
+
+<footer>
+    <img src="Image/logo.png" alt="hitoyz logo">
+
+    <div class="socialIcon">
+      <i class="fa-brands fa-square-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+    </div>
+
+    <h3>HI-Toyz © 2023</h3>
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>  
+    
+</footer>
+
+</html>
